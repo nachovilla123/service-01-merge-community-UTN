@@ -2,13 +2,16 @@ import express from "express";
 import { mergeCommunities } from "./service/mergeCommunities";
 import { swaggerSpec } from "../swaggerConfig"; // Ajusta la ruta según tu estructura de archivos
 import swaggerUi from "swagger-ui-express";
+import * as dotenv from "dotenv";
+
+dotenv.config();
 
 const app = express();
 app.use(express.json()); // middleware que transforma la req.body en un objeto JSON
 
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 /**
  * @swagger
