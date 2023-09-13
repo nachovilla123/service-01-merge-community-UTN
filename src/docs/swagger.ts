@@ -5,6 +5,7 @@ const swaggerDefinition: OAS3Definition = {
   info: {
     title: "Documentacion de mi API",
     version: "1.0.0",
+    description: "API para la gestion de comunidades.",
   },
   components: {
     schemas: {

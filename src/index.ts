@@ -1,7 +1,7 @@
 import express from "express";
 //import { swaggerSpec } from "../swaggerConfig"; // Ajusta la ruta según tu estructura de archivos
 import swaggerUi from "swagger-ui-express";
-import swaggerSetup from "./docs/swagger"; 
+import swaggerSetup from "./docs/swagger";
 
 import recommendationsRoutes from "./routes/recommendations";
 import mergeRoutes from "./routes/merge";
@@ -19,17 +19,10 @@ app.get("/", (_req, res) => {
   res.send("Hello World! hola a todos");
 });
 
-
-
 //routes
-app.use("/api/recommendations",recommendationsRoutes);
-app.use("/api/fusion",mergeRoutes);
-
+app.use("/api/recommendations", recommendationsRoutes);
+app.use("/api/fusion", mergeRoutes);
 
 app.listen(PORT, () => {
   console.log(`⚡️[server]: Server is running at http://localhost:${PORT}`);
 });
-
-
-
-
