@@ -93,3 +93,15 @@ export function haveCommonMembers(
   const totalMembers = community1.members.length;
   return commonMemberCount / totalMembers >= minPercentage;
 }
+
+export function isDateMoreThan6MonthsAgo(dateString: any): boolean {
+  const stringToDate = new Date(dateString);
+
+  const sixMonthsInMilliseconds = 6 * 30 * 24 * 60 * 60 * 1000; // Approximately 30 days per month
+  const currentDate = new Date();
+  const sixMonthsAgo = new Date(currentDate.getTime() - sixMonthsInMilliseconds);
+
+  return stringToDate <= sixMonthsAgo;
+}
+
+

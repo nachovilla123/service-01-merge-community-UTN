@@ -3,6 +3,7 @@ import {
   haveCommonElements,
   haveCommonMembers,
   haveSameDegreeOfConfidence,
+  isDateMoreThan6MonthsAgo
 } from "./fusion";
 
 export function shouldMergeCommunities(
@@ -21,16 +22,18 @@ export function shouldMergeCommunities(
       0.75
     ) &&
     haveSameDegreeOfConfidence(community1, community2) &&
-    haveCommonMembers(community1, community2, 0.75)
+    haveCommonMembers(community1, community2, 0.75) &&
+    isDateMoreThan6MonthsAgo(community1.lastTimeMerged) &&
+    isDateMoreThan6MonthsAgo(community2.lastTimeMerged)
   );
 }
 
 //*------------------------------ MERGE COMMUNITY ------------------------------*//
-
+const responseCommunities: Community[]= [];
 export function mergeCommunities(
   community1: Community,
   community2: Community
-): Community {
+): Community[] {
   if (shouldMergeCommunities(community1, community2)) {
     // Fusionar miembros, servicios interesantes y establecimientos interesantes
     const mergedMembers = mergeLists(
@@ -55,13 +58,17 @@ export function mergeCommunities(
     const mergedCommunity: Community = {
       id: "merged", // Asigna un ID adecuado o define la lógica para generar uno nuevo
       name: "Merged Community", // Define un nombre adecuado
+      lastTimeMerged: new Date(), 
       degreeOfConfidence: community1.degreeOfConfidence, // Puedes elegir tomar el grado de confianza de una de las comunidades
       members: mergedMembers,
       interestingServices: mergedServices,
       interestingEstablishments: mergedEstablishments,
     };
+    responseCommunities.push(community1);
+    responseCommunities.push(community2);
+    responseCommunities.push(mergedCommunity);
 
-    return mergedCommunity;
+    return responseCommunities;
   }
 
   throw new Error("Las comunidades no pueden mergearse.");

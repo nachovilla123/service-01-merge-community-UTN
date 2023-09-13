@@ -27,6 +27,7 @@ export const commonEstablishments: InterestingEstablishment[] = [
 export const community1: Community = {
   id: "101",
   name: "Comunidad 1",
+  lastTimeMerged: new Date('2022-03-15T12:00:00Z'),
   degreeOfConfidence: 0.9,
   members: [...commonMembers, { id: "4", name: "Miembro 4" }],
   interestingServices: [...commonServices, { id: "4", name: "Servicio 4" }],
@@ -39,6 +40,7 @@ export const community1: Community = {
 export const community2: Community = {
   id: "102",
   name: "Comunidad 2",
+  lastTimeMerged: new Date('2022-03-15T12:00:00Z'),
   degreeOfConfidence: 0.8,
   members: [...commonMembers, { id: "5", name: "Miembro 5" }],
   interestingServices: [...commonServices, { id: "5", name: "Servicio 5" }],
@@ -51,6 +53,7 @@ export const community2: Community = {
 export const community3: Community = {
   id: "103",
   name: "Comunidad 3",
+  lastTimeMerged: new Date('2022-03-15T12:00:00Z'),
   degreeOfConfidence: 0.7,
   members: [...commonMembers, { id: "6", name: "Miembro 6" }],
   interestingServices: [

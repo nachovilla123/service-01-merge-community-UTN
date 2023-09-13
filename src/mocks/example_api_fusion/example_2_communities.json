@@ -2,6 +2,7 @@
   "community1": {
     "id": "101",
     "name": "Comunidad 1",
+    "lastTimeMerged": "2022-03-15T12:00:00.000Z",
     "degreeOfConfidence": 0.9,
     "members": [
       {
@@ -65,6 +66,7 @@
   "community2": {
     "id": "102",
     "name": "Comunidad 2",
+    "lastTimeMerged": "2022-03-15T12:00:00.000Z",
     "degreeOfConfidence": 0.9,
     "members": [
       {
