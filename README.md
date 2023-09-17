@@ -1,3 +1,4 @@
+
 # Servicio de Fusión de Comunidades - Documentación del Proyecto
 
 Este repositorio contiene el desarrollo del servicio  "Servicio de Fusión de Comunidades", desarrollado en TypeScript y utilizando el framework Express.js. El objetivo de este README es proporcionar una guía paso a paso para comprender y ejecutar el proyecto, así como explicar el funcionamiento de los scripts disponibles y cómo ejecutar pruebas.
@@ -14,11 +15,11 @@ Clone este repositorio en tu sistema local utilizando Git:
     git clone <URL-del-repositorio>
 
 #### Navega al directorio del proyecto:
-`cd servicio_fusion_comunidades_dds`
+    cd servicio_fusion_comunidades_dds
 
 
 #### Instala las dependencias del proyecto utilizando npm:
-`npm install`
+    npm install
 
 
 #### Scripts Disponibles
@@ -37,7 +38,7 @@ Este proyecto incluye varios scripts definidos en el archivo package.json. Aquí
 #### Ejecución del Proyecto
 Para ejecutar el proyecto en modo de desarrollo, puedes usar el siguiente comando:
 
-`npm run dev`
+    npm run dev
 
 
 **El servidor estará disponible en http://localhost:3000 por defecto. Puedes cambiar el puerto en el archivo src/index.ts.**
@@ -45,7 +46,7 @@ Para ejecutar el proyecto en modo de desarrollo, puedes usar el siguiente comand
 
 Para ejecutar el proyecto en modo de producción, puedes usar el siguiente comando:
 
-`npm start`
+    npm start
 
 Recuerda que debes haber compilado previamente el código TypeScript utilizando el comando npm run tsc.
 
@@ -53,6 +54,6 @@ Recuerda que debes haber compilado previamente el código TypeScript utilizando 
 #### Pruebas
 Para ejecutar las pruebas del proyecto, utiliza el siguiente comando:
 
-`npm test  || npm run test`
+    npm test  || npm run test
 
 Este comando buscará y ejecutará todas las pruebas en la carpeta src/tests/ y mostrará los resultados en la consola. Asegúrate de tener configuradas las pruebas adecuadamente en tus archivos de prueba.
