@@ -12,7 +12,7 @@ Antes de comenzar a trabajar con este proyecto, asegúrate de tener instalados l
 #### Instalación
 Clone este repositorio en tu sistema local utilizando Git:
 
-    git clone <URL-del-repositorio>
+    git clone https://github.com/nachovilla123/service-01-merge-community-UTN.git
 
 #### Navega al directorio del proyecto:
     cd servicio_fusion_comunidades_dds
