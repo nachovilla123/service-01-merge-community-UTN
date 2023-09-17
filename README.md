@@ -9,6 +9,9 @@ Antes de comenzar a trabajar con este proyecto, asegúrate de tener instalados l
 - Node.js: Descargar e instalar Node.js
 - npm (Administrador de paquetes de Node.js): Generalmente se instala automáticamente con Node.js.
 
+#### Swagger
+Una vez realizado todos los pasos que se describen a continuación , ingresar a  http://localhost:3000/api-docs para encontrar mejor documentacion sobre los endpoints del servicio
+
 #### Instalación
 Clone este repositorio en tu sistema local utilizando Git:
 
