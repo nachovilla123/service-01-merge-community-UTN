@@ -5,7 +5,8 @@ const swaggerDefinition: OAS3Definition = {
   info: {
     title: "Documentacion de mi API",
     version: "1.0.0",
-    description: "API para la gestion de comunidades.",
+    description: "API para la fusión de comunidades. Grupo 01. Desarrolladores: Santiago Arrascaeta , Juan Ignacio Borda, Nicolas Galfione, Gonzalez Riverol Camila , Ignacio Mateo Villarruel.
+",
   },
   components: {
     schemas: {
