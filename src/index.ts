@@ -1,5 +1,4 @@
 import express from "express";
-//import { swaggerSpec } from "../swaggerConfig"; // Ajusta la ruta según tu estructura de archivos
 import swaggerUi from "swagger-ui-express";
 import swaggerSetup from "./docs/swagger";
 
