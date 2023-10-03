@@ -1,0 +1,6 @@
+El link de deploy es:
+
+Los endpoint:
+https://service-01-merge-community-utn-production.up.railway.app/api/recommendations --> recommendaciones
+https://service-01-merge-community-utn-production.up.railway.app/api/fusion --> fusion de dos comunidades
+https://service-01-merge-community-utn-production.up.railway.app/api-docs/ --> documentacion
