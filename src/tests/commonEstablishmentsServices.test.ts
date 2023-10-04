@@ -38,11 +38,10 @@ describe("haveCommonElements", () => {
 
     const result = haveCommonElements(
       community1Services,
-      community2Services, 
+      community2Services,
       0.75
     );
     expect(result).toBe(true);
-         
   });
 
   it("should compare two communities' interestingServices arrays (false case)", () => {
@@ -50,7 +49,7 @@ describe("haveCommonElements", () => {
     const list2 = community3.interestingServices;
 
     const result = haveCommonElements(list1, list2, 0.75);
-    
+
     expect(result).toBe(false);
   });
 

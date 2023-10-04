@@ -4,27 +4,25 @@ import { mergeCommunities } from "../service/mergeCommunities";
 const router = Router();
 
 router.get("/", (_req, res) => {
-    res.send("FUSION");
-  });
-  
+  res.send("FUSION");
+});
 
-  router.post("/", (req, res) => {
- 
-    const { community1, community2 } = req.body;
-  
-    if (!community1 || !community2) {
-      return res
-        .status(400)
-        .json({ error: "Se requieren dos comunidades válidas para la fusión." });
-    }
-    // Fusiona las dos comunidades
-    const mergedCommunity = mergeCommunities(community1, community2);
-  
-    // Envía la comunidad fusionada como respuesta
-    res.json({ mergedCommunity });
-  });
+router.post("/", (req, res) => {
+  const { community1, community2 } = req.body;
 
-  /**
+  if (!community1 || !community2) {
+    return res
+      .status(400)
+      .json({ error: "Se requieren dos comunidades válidas para la fusión." });
+  }
+  // Fusiona las dos comunidades
+  const mergedCommunity = mergeCommunities(community1, community2);
+
+  // Envía la comunidad fusionada como respuesta
+  res.json({ mergedCommunity });
+});
+
+/**
  * Post Track
  * @openapi
  * /api/fusion:

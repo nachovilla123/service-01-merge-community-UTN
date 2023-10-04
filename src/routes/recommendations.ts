@@ -5,21 +5,18 @@ import { Community } from "../types/community";
 const router = Router();
 
 router.get("/", (_req, res) => {
-    res.send("RECOMENDACIONES");
-  });
-
+  res.send("RECOMENDACIONES");
+});
 
 router.post("/", (req, res) => {
- 
-const communities: Community[] = req.body;
+  const communities: Community[] = req.body;
 
-const possibleMerges: { community1: Community, community2: Community }[] = recommendedCommunityMerge(communities);
-  
-    // Envía las posibles fusiones
-    res.json({ possibleMerges  });
-  
-    
-  });
+  const possibleMerges: { community1: Community; community2: Community }[] =
+    recommendedCommunityMerge(communities);
+
+  // Envía las posibles fusiones
+  res.json({ possibleMerges });
+});
 
 /**
  * Post Track

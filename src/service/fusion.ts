@@ -6,8 +6,6 @@ import { Community } from "../types/community";
 // buscará las siguientes coincidencias (todos los parámetros numéricos definidos deben ser fácilmente
 // modificables):
 
-
-
 //* STEPS:
 
 // ● Coincidan en más del 75% de los establecimientos observados
@@ -38,15 +36,12 @@ import { Community } from "../types/community";
 
 // Función para verificar si dos listas tienen un porcentaje mínimo de elementos en común (nos abstraemos)
 
-
 export function haveCommonElements(
   list1: any[],
   list2: any[],
   minPercentage: number
 ) {
- 
   const communElements: any[] = [];
-
 
   for (let elemLista1 = 0; elemLista1 < list1.length; elemLista1++) {
     for (let elemLista2 = 0; elemLista2 < list2.length; elemLista2++) {
@@ -54,21 +49,17 @@ export function haveCommonElements(
         if (
           !communElements.some((element) => element.id === list1[elemLista1].id)
         ) {
-          communElements.push(list1[elemLista1]); 
-        } 
-
+          communElements.push(list1[elemLista1]);
+        }
       }
     }
   }
 
-  const percentage = communElements.length / Math.max(list1.length, list2.length);
+  const percentage =
+    communElements.length / Math.max(list1.length, list2.length);
 
   return percentage >= minPercentage;
 }
-
-
-
-
 
 export function haveSameDegreeOfConfidence(
   community1: Community,
@@ -76,10 +67,6 @@ export function haveSameDegreeOfConfidence(
 ) {
   return community1.degreeOfConfidence === community2.degreeOfConfidence;
 }
-
-
-
-
 
 // Función para verificar si dos comunidades tienen al menos un 5% de usuarios en común
 export function haveCommonMembers(
@@ -99,9 +86,9 @@ export function isDateMoreThan6MonthsAgo(dateString: any): boolean {
 
   const sixMonthsInMilliseconds = 6 * 30 * 24 * 60 * 60 * 1000; // Approximately 30 days per month
   const currentDate = new Date();
-  const sixMonthsAgo = new Date(currentDate.getTime() - sixMonthsInMilliseconds);
+  const sixMonthsAgo = new Date(
+    currentDate.getTime() - sixMonthsInMilliseconds
+  );
 
   return stringToDate <= sixMonthsAgo;
 }
-
-

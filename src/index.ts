@@ -15,7 +15,7 @@ const PORT = 3000;
 
 app.get("/", (_req, res) => {
   console.log("nos saludan!");
-  res.send("Hello World! hola a todos");
+  res.send("Hello World! hola a todos hola");
 });
 
 //routes

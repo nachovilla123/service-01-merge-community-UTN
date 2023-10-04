@@ -3,7 +3,7 @@ import {
   haveCommonElements,
   haveCommonMembers,
   haveSameDegreeOfConfidence,
-  isDateMoreThan6MonthsAgo
+  isDateMoreThan6MonthsAgo,
 } from "./fusion";
 
 export function shouldMergeCommunities(
@@ -29,7 +29,7 @@ export function shouldMergeCommunities(
 }
 
 //*------------------------------ MERGE COMMUNITY ------------------------------*//
-const responseCommunities: Community[]= [];
+const responseCommunities: Community[] = [];
 export function mergeCommunities(
   community1: Community,
   community2: Community
@@ -58,7 +58,7 @@ export function mergeCommunities(
     const mergedCommunity: Community = {
       id: "merged", // Asigna un ID adecuado o define la lógica para generar uno nuevo
       name: "Merged Community", // Define un nombre adecuado
-      lastTimeMerged: new Date(), 
+      lastTimeMerged: new Date(),
       degreeOfConfidence: community1.degreeOfConfidence, // Puedes elegir tomar el grado de confianza de una de las comunidades
       members: mergedMembers,
       interestingServices: mergedServices,
@@ -126,10 +126,6 @@ function mergeLists(
 
   return [...communElements, ...distinctElements1, ...distinctElements2];
 }
-
-
-
-
 
 // Función de comparación para miembros
 const compareObjectWithId = (object1: any, object2: any) =>

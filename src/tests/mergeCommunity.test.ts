@@ -1,4 +1,8 @@
-import { commonEstablishments, commonMembers, commonServices } from "../mocks/community/community";
+import {
+  commonEstablishments,
+  commonMembers,
+  commonServices,
+} from "../mocks/community/community";
 import { mergeCommunities } from "../service/mergeCommunities";
 
 describe("mergeCommunities", () => {
@@ -6,7 +10,7 @@ describe("mergeCommunities", () => {
     const community1 = {
       id: "101",
       name: "Comunidad 1",
-      lastTimeMerged: new Date('2022-03-15T12:00:00Z'),
+      lastTimeMerged: new Date("2022-03-15T12:00:00Z"),
       degreeOfConfidence: 0.9,
       members: [...commonMembers, { id: "4", name: "Miembro 4" }],
       interestingServices: [...commonServices, { id: "4", name: "Servicio 4" }],
@@ -19,7 +23,7 @@ describe("mergeCommunities", () => {
     const community2 = {
       id: "102",
       name: "Comunidad 2",
-      lastTimeMerged: new Date('2022-03-15T12:00:00Z'),
+      lastTimeMerged: new Date("2022-03-15T12:00:00Z"),
       degreeOfConfidence: 0.9,
       members: [...commonMembers, { id: "5", name: "Miembro 5" }],
       interestingServices: [...commonServices, { id: "5", name: "Servicio 5" }],
@@ -30,7 +34,6 @@ describe("mergeCommunities", () => {
     };
 
     const mergedCommunity = mergeCommunities(community1, community2);
-
 
     // Verificar que los miembros se fusionaron sin duplicados
     expect(mergedCommunity[2].members).toHaveLength(5); // 4 miembros comunes + 1 nuevo miembro
@@ -46,7 +49,7 @@ describe("mergeCommunities", () => {
     const community1 = {
       id: "101",
       name: "Comunidad 1",
-      lastTimeMerged: new Date('2023-03-15T12:00:00Z'),
+      lastTimeMerged: new Date("2023-03-15T12:00:00Z"),
       degreeOfConfidence: 0.9,
       members: [...commonMembers, { id: "4", name: "Miembro 4" }],
       interestingServices: [...commonServices, { id: "4", name: "Servicio 4" }],
@@ -59,7 +62,7 @@ describe("mergeCommunities", () => {
     const community2 = {
       id: "102",
       name: "Comunidad 2",
-      lastTimeMerged: new Date('2023-03-15T12:00:00Z'),
+      lastTimeMerged: new Date("2023-03-15T12:00:00Z"),
       degreeOfConfidence: 0.8, // Diferente grado de confianza
       members: [...commonMembers, { id: "5", name: "Miembro 5" }],
       interestingServices: [...commonServices, { id: "5", name: "Servicio 5" }],
@@ -78,7 +81,7 @@ describe("mergeCommunities", () => {
     const community1 = {
       id: "101",
       name: "Comunidad 1",
-      lastTimeMerged: new Date('2022-03-15T12:00:00Z'),
+      lastTimeMerged: new Date("2022-03-15T12:00:00Z"),
       degreeOfConfidence: 0.9,
       members: [...commonMembers, { id: "4", name: "Miembro 4" }], // Sin miembros en común
       interestingServices: [...commonServices, { id: "4", name: "Servicio 4" }],
@@ -91,7 +94,7 @@ describe("mergeCommunities", () => {
     const community2 = {
       id: "102",
       name: "Comunidad 2",
-      lastTimeMerged: new Date('2022-03-15T12:00:00Z'),
+      lastTimeMerged: new Date("2022-03-15T12:00:00Z"),
       degreeOfConfidence: 0.9,
       members: [], // Sin miembros en común
       interestingServices: [...commonServices, { id: "5", name: "Servicio 5" }],

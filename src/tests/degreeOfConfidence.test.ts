@@ -4,7 +4,7 @@ import { Community } from "../types/community";
 const community1: Community = {
   id: "101",
   name: "Comunidad 1",
-  lastTimeMerged: new Date('2022-03-15T12:00:00Z'),
+  lastTimeMerged: new Date("2022-03-15T12:00:00Z"),
   degreeOfConfidence: 0.9,
   members: [],
   interestingServices: [],
@@ -14,7 +14,7 @@ const community1: Community = {
 const community2: Community = {
   id: "102",
   name: "Comunidad 2",
-  lastTimeMerged: new Date('2022-03-15T12:00:00Z'),
+  lastTimeMerged: new Date("2022-03-15T12:00:00Z"),
   degreeOfConfidence: 0.9, // Mismo grado de confianza que community1
   members: [],
   interestingServices: [],
@@ -24,7 +24,7 @@ const community2: Community = {
 const community3: Community = {
   id: "103",
   name: "Comunidad 3",
-  lastTimeMerged: new Date('2022-03-15T12:00:00Z'),
+  lastTimeMerged: new Date("2022-03-15T12:00:00Z"),
   degreeOfConfidence: 0.7, // Grado de confianza diferente a community1
   members: [],
   interestingServices: [],

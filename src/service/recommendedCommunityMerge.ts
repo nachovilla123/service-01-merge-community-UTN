@@ -2,8 +2,9 @@ import { Community } from "../types/community";
 import { shouldMergeCommunities } from "./mergeCommunities";
 import { PosibleMerge } from "../types/posibleMerge";
 
-
-export function recommendedCommunityMerge(communities: Community[]): { community1: Community, community2: Community }[] {
+export function recommendedCommunityMerge(
+  communities: Community[]
+): { community1: Community; community2: Community }[] {
   const possibleMerges: PosibleMerge[] = [];
 
   // Iterar sobre todas las combinaciones de comunidades
@@ -13,12 +14,10 @@ export function recommendedCommunityMerge(communities: Community[]): { community
       const community2 = communities[j];
 
       if (shouldMergeCommunities(community1, community2)) {
-
         possibleMerges.push({ community1, community2 });
       }
     }
   }
-  
-  return possibleMerges;
 
+  return possibleMerges;
 }
