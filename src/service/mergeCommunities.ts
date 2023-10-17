@@ -29,11 +29,14 @@ export function shouldMergeCommunities(
 }
 
 //*------------------------------ MERGE COMMUNITY ------------------------------*//
-const responseCommunities: Community[] = [];
+
+
 export function mergeCommunities(
   community1: Community,
   community2: Community
 ): Community[] {
+  const responseCommunities: Community[] = [];
+  
   if (shouldMergeCommunities(community1, community2)) {
     // Fusionar miembros, servicios interesantes y establecimientos interesantes
     const mergedMembers = mergeLists(

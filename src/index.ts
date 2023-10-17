@@ -4,8 +4,12 @@ import swaggerSetup from "./docs/swagger";
 
 import recommendationsRoutes from "./routes/recommendations";
 import mergeRoutes from "./routes/merge";
+const cors = require("cors");
 
 const app = express();
+// middlewares
+app.use(cors());
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json()); // middleware que transforma la req.body en un objeto JSON
 
 //app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));

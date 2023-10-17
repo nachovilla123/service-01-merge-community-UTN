@@ -1,6 +1,6 @@
 import { InterestingService } from "../../types/interestingServices";
 
-const services: InterestingService[] = [
+export const services: InterestingService[] = [
     { id: "1", name: "Servicio 1" },
     { id: "2", name: "Servicio 2" },
     { id: "3", name: "Servicio 3" },

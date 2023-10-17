@@ -7,7 +7,7 @@ router.get("/", (_req, res) => {
   res.send("FUSION");
 });
 
-router.post("/", (req, res) => {
+router.post("/", async (req, res) => {
   const { community1, community2 } = req.body;
 
   if (!community1 || !community2) {
@@ -16,10 +16,10 @@ router.post("/", (req, res) => {
       .json({ error: "Se requieren dos comunidades válidas para la fusión." });
   }
   // Fusiona las dos comunidades
-  const mergedCommunity = mergeCommunities(community1, community2);
+  let mergedCommunity: any = mergeCommunities(community1, community2);
 
   // Envía la comunidad fusionada como respuesta
-  res.json({ mergedCommunity });
+  res.status(200).json({ mergedCommunity });
 });
 
 /**
